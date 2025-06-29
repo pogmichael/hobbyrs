@@ -1,7 +1,7 @@
 /* 🔧 CONFIGURATION DASHBOARD */
 :root {
   --accent-color: #000000;
-  --font-main: system-ui, sans-serif;
+  --font-main: 'Inter', sans-serif;
   --max-width: 800px;
 }
 
