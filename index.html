@@ -1,41 +1,160 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Performance-optimized Google Font load -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOBBY RADSPORT CC</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HOBBY RS CC</title>
-  <link rel="stylesheet" href="css/styles.css" />
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      background-color: #ffffff;
+      min-height: 100vh;
+    }
+
+    /* Main Grid Container */
+    .site-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Title Logo - Always Full Width */
+    .title-logo {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
+    .title-logo a {
+      display: block;
+      width: 100%;
+    }
+
+    .title-logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Sticker Grid */
+    .sticker-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0.5rem 0;
+    }
+
+    /* Individual Sticker Container */
+    .sticker-item {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .sticker-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Desktop: Wrapping Grid for Stickers */
+    @media (min-width: 768px) {
+      .sticker-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .sticker-item {
+        justify-content: center;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .site-wrapper {
+        padding: 2rem;
+        gap: 2rem;
+      }
+
+      .sticker-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .sticker-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* For truly full-width logo beyond max-width container */
+    .full-bleed-wrapper {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+
+    .full-bleed-wrapper a {
+      display: block;
+    }
+
+    .full-bleed-wrapper img {
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
+  <div class="site-wrapper">
+    
+    <!-- Title Logo - Full Browser Width, mailto link -->
+    <header class="title-logo full-bleed-wrapper">
+      <a href="mailto:mail@hobbyradsport.cc" title="E-Mail an HOBBY RADSPORT CC">
+        <img src="images/hobby_radsport_cc_logo.png" alt="HOBBY RADSPORT CC">
+      </a>
+    </header>
 
-  <!-- 🧭 SITE CONFIGURATION DASHBOARD (you can edit values here) -->
-  <!--
-    Site title: Personal Portfolio
-    Main accent color: #009578
-    Font: system-ui
-    Max content width: 800px
-  -->
+    <!-- Sticker Grid -->
+    <main class="sticker-grid">
+      
+      <article class="sticker-item">
+        <img src="images/schrott.png" alt="SCHROTT">
+      </article>
 
-  <!-- 👋 Hero Section -->
-  <header class="hero">
-   <img src="img/hobbyrscc_shuminosaikuringu.gif" alt="HOBBY RADSPORT CC" width="600" />
+      <article class="sticker-item">
+        <img src="images/s-wurst.png" alt="S-WURST">
+      </article>
 
-  </header>
+      <article class="sticker-item">
+        <img src="images/pissstop.png" alt="PissStop">
+      </article>
 
-  <!-- 📞 Contact Section -->
-  <footer class="footer">
-  <!--  <img src="img/cruribus_tantum.svg" alt="cruribus tantum" width="200" /> -->
-  </footer>
+      <article class="sticker-item">
+        <img src="images/tourer-pace.png" alt="TOURER-PACE">
+      </article>
 
+      <article class="sticker-item">
+        <img src="images/tourer-pace_stack.png" alt="TOURER-PACE Stack">
+      </article>
+
+      <article class="sticker-item">
+        <img src="images/brumpzum.png" alt="BRUMPZUM">
+      </article>
+
+    </main>
+
+  </div>
 </body>
 </html>
-
-
