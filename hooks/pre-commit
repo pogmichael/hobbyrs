@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# Pre-commit hook: Regenerate index.html from images
+#
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+python3 "$REPO_ROOT/build.py"
+if [ $? -ne 0 ]; then
+    echo "Build failed! Commit aborted."
+    exit 1
+fi
+
+git add "$REPO_ROOT/index.html"
+exit 0
