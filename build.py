@@ -24,11 +24,14 @@ def get_display_name(filename: str) -> str:
     """Convert filename to display name.
 
     Examples:
-        'aebbelwoi.gif' -> 'AEBBELWOI'
-        's_wurst.png' -> 'S WURST'
-        'tourer_pace_black.png' -> 'TOURER PACE BLACK'
+        '001_aebbelwoi.gif' -> 'AEBBELWOI'
+        '002_s_wurst.png' -> 'S WURST'
+        '003_tourer_pace_black.png' -> 'TOURER PACE BLACK'
     """
     stem = Path(filename).stem
+    # Strip "001_" prefix (first 4 characters)
+    if len(stem) > 4 and stem[3] == "_":
+        stem = stem[4:]
     return stem.replace("_", " ").upper()
 
 
